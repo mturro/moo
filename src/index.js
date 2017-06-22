@@ -12,7 +12,7 @@ app.listen(process.env.PORT || 3000);
 app.post('/', function(req, res) {
   if (req.body.token !== 'hVZjCazmFRpSopBHtE2a5L3S') {
     return res.status(400)
-        .send({ text: req.body.token });
+        .send({ text: 'token problem buddy' });
   }
 
   if (!req.body.text) {
