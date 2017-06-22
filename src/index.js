@@ -12,7 +12,7 @@ app.listen(process.env.PORT || 3000);
 app.post('/', function(req, res) {
   if (req.body.token !== process.env.SLACK_TOKEN) {
     return res.status(400)
-        .send({ text: 'Slack token is incorrect' });
+        .send({ text: req.body.token });
   }
 
   if (!req.body.text) {
